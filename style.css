@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+footer {
+  margin-top: 2rem;
+}
+.attribution {
+  font-size: 12px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+body {
+  background-color: hsl(235, 21%, 11%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.background_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.background_image img {
+  object-fit: cover;
+  object-position: left;
+}
+.container {
+  width: 100%;
+  margin: 0 40px;
+  max-width: 500px;
+  margin-top: 4rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tittle {
+  font-size: 2.5rem;
+  letter-spacing: 10px;
+  font-weight: bold;
+  color: white;
+}
+.inputchecker_box {
+  display: flex;
+  padding: 1.2rem;
+  background-color: hsl(235, 24%, 19%);
+  margin-top: 1.5rem;
+  border-radius: 0.3rem;
+}
+.checker_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+}
+.checker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid hsl(237, 14%, 26%);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.input_box {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+.input_box form {
+  flex-grow: 1;
+}
+.input_box input {
+  /* width: 100%; */
+  display: flex;
+  background-color: transparent;
+  border: none;
+
+  padding: 0 0.5rem;
+  outline: none;
+}
+.input_box input::placeholder {
+  color: hsl(233, 14%, 35%);
+}
+.checker img {
+  visibility: hidden;
+}
+.checker:hover img {
+  visibility: visible;
+}
+.checker:hover {
+  background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+}
+.todo_container {
+  background-color: hsl(235, 24%, 19%);
+  margin-top: 1rem;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.6);
+}
+
+.todo_item {
+  display: flex;
+  gap: 12px;
+  padding: 1.2rem;
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 39%, 85%);
+  border-bottom: 2px solid hsl(237, 14%, 26%);
+  transition: all 0.25s;
+  display: flex;
+}
+.todo_item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0px 7px 0px hsl(235, 21%, 11%);
+  border-color: hsl(235, 24%, 19%);
+}
+.input_text {
+  display: flex;
+  align-items: center;
+}
+.clear_todo {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.todo_info {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem;
+  align-items: center;
+  color: hsl(233, 14%, 35%);
+  cursor: pointer;
+}
+.item_middle {
+  display: flex;
+  justify-content: center;
+}
+.item_middle span {
+  padding: 0 0.5rem;
+}
+.item_middle:hover,
+.item_middle span.active,
+.item_right:hover {
+  color: hsl(220, 98%, 61%);
+}
+/* .text_strike {
+  text-decoration: line-through;
+  color: hsl(233, 14%, 35%);
+} */
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 360px;
+  }
+  .tittle {
+    display: flex;
+    font-size: 2rem;
+    letter-spacing: 10px;
+  }
+  .inputchecker_box {
+    padding: 0.8rem;
+  }
+  .todo_item {
+    padding: 0.8rem;
+  }
+  .todo_info {
+    padding: 0.8rem;
+    font-size: 12px;
+  }
+  .item_middle span {
+    padding: 0 0.2rem;
+  }
+}
